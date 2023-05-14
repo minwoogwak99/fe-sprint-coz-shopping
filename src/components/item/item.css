@@ -1,0 +1,63 @@
+.item {
+    /* display: flex; */
+    width: 20vw;
+
+
+}
+
+.itemWrapper {
+    margin: 20px;
+
+    & * {
+        font-family: 'Nanum Gothic Coding', monospace;
+    }
+}
+
+.itemImageWrapper {
+    width: 300px;
+    height: 200px;
+    margin-bottom: 10px;
+
+}
+
+.itemPic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    position: relative
+}
+
+.fa-star {
+    position: relative;
+    left: 85%;
+    bottom: 25%;
+    font-size: 25px;
+    color: white;
+}
+
+
+.exhibitionDescTitle {
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.branddescTitle, .follower, .categoryDescTitle, .productTitle {
+    font-weight: 700;
+}
+
+.productDescPerc {
+    font-weight: 700;
+}
+
+.productDesc {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.brandDescRight, .productDescRight {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}

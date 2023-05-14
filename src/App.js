@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import Home from "./Pages/Home";
+import Item from "./components/item/Item";
 
 function App() {
   const [itemData, setItemData] = useState([]);
@@ -11,8 +12,14 @@ function App() {
         return res.json();
       })
       .then((data) => {
-        setItemData(data);
-        console.log(data);
+        let dataToPut = data.map((item) => {
+          return {
+            isBookmarked: false,
+            ...item,
+          };
+        });
+        setItemData(dataToPut);
+        console.log(dataToPut);
       })
       .catch((err) => console.error(err));
   };
@@ -23,9 +30,7 @@ function App() {
 
   return (
     <div className="App">
-      {itemData.map((user) => (
-        <div>{user.title}</div>
-      ))}
+      <Home items={itemData} />
     </div>
   );
 }
