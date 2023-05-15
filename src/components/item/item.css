@@ -17,6 +17,10 @@
     }
 }
 
+.buttonsss {
+    margin-top: 50px;
+}
+
 .itemImageWrapper {
     width: 80%;
     height: 300px;
@@ -37,6 +41,10 @@
     bottom: 25%;
     font-size: 30px;
     color: white;
+
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 

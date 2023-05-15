@@ -1,8 +1,8 @@
 import React from "react";
 import "./item.css";
 
-function Item(props) {
-  let item = props.itemData;
+function Item({ itemData, isBookmarkedToggle }) {
+  let item = itemData;
 
   if (item && item["type"] === "Product") {
     return (
@@ -11,9 +11,15 @@ function Item(props) {
           <div className="itemImageWrapper">
             <img className="itemPic" src={item.image_url} alt="" />
             {item.isBookmarked ? (
-              <i className="fa-solid fa-star"></i>
+              <i
+                onClick={() => isBookmarkedToggle(item.id)}
+                className="fa-solid fa-star"
+              ></i>
             ) : (
-              <i className="fa-regular fa-star"></i>
+              <i
+                onClick={() => isBookmarkedToggle(item.id)}
+                className="fa-regular fa-star"
+              ></i>
             )}
           </div>
           <div className="productDesc">
@@ -34,9 +40,15 @@ function Item(props) {
           <div className="itemImageWrapper">
             <img className="itemPic" src={item.image_url} alt="" />
             {item.isBookmarked ? (
-              <i className="fa-solid fa-star"></i>
+              <i
+                onClick={() => isBookmarkedToggle(item.id)}
+                className="fa-solid fa-star"
+              ></i>
             ) : (
-              <i className="fa-regular fa-star"></i>
+              <i
+                onClick={() => isBookmarkedToggle(item.id)}
+                className="fa-regular fa-star"
+              ></i>
             )}
           </div>
           <div className="productDesc">
@@ -53,9 +65,15 @@ function Item(props) {
           <div className="itemImageWrapper">
             <img className="itemPic" src={item.image_url} alt="" />
             {item.isBookmarked ? (
-              <i className="fa-solid fa-star"></i>
+              <i
+                onClick={() => isBookmarkedToggle(item.id)}
+                className="fa-solid fa-star"
+              ></i>
             ) : (
-              <i className="fa-regular fa-star"></i>
+              <i
+                onClick={() => isBookmarkedToggle(item.id)}
+                className="fa-regular fa-star"
+              ></i>
             )}
           </div>
           <div className="exhibitionDescTitle">{item.title}</div>
@@ -71,9 +89,15 @@ function Item(props) {
         <div className="itemImageWrapper">
           <img className="itemPic" src={item && item.brand_image_url} alt="" />
           {item && item.isBookmarked ? (
-            <i className="fa-solid fa-star"></i>
+            <i
+              onClick={() => isBookmarkedToggle(item.id)}
+              className="fa-solid fa-star"
+            ></i>
           ) : (
-            <i className="fa-regular fa-star"></i>
+            <i
+              onClick={() => isBookmarkedToggle(item.id)}
+              className="fa-regular fa-star"
+            ></i>
           )}
         </div>
         <div className="productDesc">
