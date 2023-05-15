@@ -1,0 +1,12 @@
+.itemGeneralGroup, .itemBookmarkedGroup {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
+.itemsGeneralTitle, .itemsBookmarkedTitle {
+    font-family: 'Nanum Gothic Coding', monospace;
+    font-weight: 700;
+    font-size: 28px;
+    margin-left: 60px;
+}
