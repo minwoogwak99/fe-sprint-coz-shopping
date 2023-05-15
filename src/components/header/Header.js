@@ -1,4 +1,5 @@
 import { React, useState } from "react";
+import { Link } from "react-router-dom";
 
 import "./header.css";
 import logoImage from "../../logo.svg";
@@ -14,9 +15,9 @@ function Header() {
   return (
     <div className="header">
       <div className="left">
-        <a href="/">
+        <Link to="/">
           <img src={logoImage} alt="" className="logoImage" />
-        </a>
+        </Link>
         <div className="logoTitle">5 Stars Shopping</div>
       </div>
       <div className="right" onClick={menuToggle}>
