@@ -14,7 +14,11 @@ function HomeList({ items, isBookmarkedToggle }) {
         <div className="itemGeneralGroup">
           {generalItemsFour.map((item) => {
             return (
-              <Item itemData={item} isBookmarkedToggle={isBookmarkedToggle} />
+              <Item
+                key={item.id}
+                itemData={item}
+                isBookmarkedToggle={isBookmarkedToggle}
+              />
             );
           })}
         </div>
@@ -24,7 +28,11 @@ function HomeList({ items, isBookmarkedToggle }) {
         <div className="itemBookmarkedGroup">
           {bookmarkedItemsFour.map((item) => {
             return (
-              <Item itemData={item} isBookmarkedToggle={isBookmarkedToggle} />
+              <Item
+                key={item.id}
+                itemData={item}
+                isBookmarkedToggle={isBookmarkedToggle}
+              />
             );
           })}
         </div>

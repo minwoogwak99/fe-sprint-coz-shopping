@@ -3,8 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import "./App.css";
 import Home from "./Pages/Home";
-import Item from "./components/item/Item";
-import Toast from "./components/toast/Toast";
 import ItemPage from "./Pages/ItemPage";
 import BookmarkPage from "./Pages/BookmarkPage";
 

@@ -1,6 +1,6 @@
 .itemGeneralGroup, .itemBookmarkedGroup {
     display: flex;
-    align-items: flex-start;
+    justify-content: center;
     margin-top: 30px;
 }
 
@@ -10,7 +10,7 @@
     font-family: 'Nanum Gothic Coding', monospace;
     font-weight: 700;
     font-size: 28px;
-    margin-left: 60px;
+    margin-left: 180px;
 }
 
 .itemsBookmarkedTitle {
@@ -19,4 +19,5 @@
 
 .homeList {
     margin-top: 150px;
+    margin-left: auto;
 }

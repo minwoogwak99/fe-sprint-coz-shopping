@@ -1,49 +1,10 @@
 .itemPage {
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
-
     height: 100vh;
 }
 
-.itemPageWrapper {
-    margin-top: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.categories {
-    display: flex;
-    justify-content: space-between;
-    width: 40%;
-}
-
-.category {
-    background-color: rgb(255, 233, 202);
-    color: black;
-    border-radius: 15px;
-    text-align: center;
-    width: 80px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition-duration: 200ms;
-    font-family: 'Nanum Gothic Coding', monospace;
-    font-weight: 700;
-
-    &:hover {
-        background-color: rgb(255, 204, 136);
-        color: rgb(0, 0, 0);
-        cursor: pointer;
-    }
-
-}
-
-.categoryIcon {
-    font-size: 35px;
-    margin-bottom: 15px;
+.solid {
+    border-top: 3px solid #FFF7D4;
+    width: 80vw;
+    margin-top: 40px;
 }

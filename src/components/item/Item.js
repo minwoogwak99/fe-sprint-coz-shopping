@@ -1,23 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import "./item.css";
+import Toast from "../toast/Toast";
+
+function Modal({ isModal, isModalToggle, item }) {
+  if (isModal) {
+    return (
+      <div className="modalWrapper">
+        <img className="modalItemImg" src={item.image_url} alt="" />
+        <div>{item.title}</div>
+        <button onClick={isModalToggle}>close</button>
+      </div>
+    );
+  }
+
+  return;
+}
 
 function Item({ itemData, isBookmarkedToggle }) {
   let item = itemData;
+  const [isModal, setIsModal] = useState(false);
+
+  let isModalToggle = () => {
+    setIsModal(!isModal);
+  };
 
   if (item && item["type"] === "Product") {
     return (
       <div className="item">
-        <div className="itemWrapper">
+        <Modal isModal={isModal} isModalToggle={isModalToggle} item={item} />
+        <div onClick={isModalToggle} className="itemWrapper">
           <div className="itemImageWrapper">
             <img className="itemPic" src={item.image_url} alt="" />
             {item.isBookmarked ? (
               <i
-                onClick={() => isBookmarkedToggle(item.id)}
+                onClick={() => {
+                  isBookmarkedToggle(item.id);
+                }}
                 className="fa-solid fa-star"
               ></i>
             ) : (
               <i
-                onClick={() => isBookmarkedToggle(item.id)}
+                onClick={() => {
+                  isBookmarkedToggle(item.id);
+                }}
                 className="fa-regular fa-star"
               ></i>
             )}
