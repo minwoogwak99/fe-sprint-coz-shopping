@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import "./header.css";
 import logoImage from "../../logo.svg";
-import Hamburger from "../hamburger/Hamburger";
+import Hamburger from "./hamburger/Hamburger";
 
 function Header() {
   let [isTopMenu, setIsTopMenu] = useState(false);

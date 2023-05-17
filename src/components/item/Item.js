@@ -1,12 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./item.css";
 import Modal from "../modal/Modal";
-
 function Item({ itemData, isBookmarkedToggle }) {
   let item = itemData;
   const [isModal, setIsModal] = useState(false);
 
-  let isModalToggle = () => {
+  const isModalToggle = () => {
     setIsModal(!isModal);
   };
 
