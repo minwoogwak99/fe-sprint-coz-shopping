@@ -1,9 +1,21 @@
 import React, { useState, useEffect } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import "./item.css";
 import Modal from "../modal/Modal";
+
 function Item({ itemData, isBookmarkedToggle }) {
   let item = itemData;
   const [isModal, setIsModal] = useState(false);
+
+  const notify = () => {
+    if (item.isBookmarked) {
+      return toast("북마크에 추가되었습니다");
+    }
+
+    return toast("북마크에 제거되었습니다.");
+  };
 
   const isModalToggle = () => {
     setIsModal(!isModal);
@@ -12,6 +24,7 @@ function Item({ itemData, isBookmarkedToggle }) {
   if (item && item["type"] === "Product") {
     return (
       <div className="item">
+        <ToastContainer />
         <Modal
           isModal={isModal}
           isModalToggle={isModalToggle}
@@ -31,6 +44,7 @@ function Item({ itemData, isBookmarkedToggle }) {
               <i
                 onClick={() => {
                   isBookmarkedToggle(item.id);
+                  notify();
                 }}
                 className="fa-solid fa-star"
               ></i>
@@ -38,6 +52,7 @@ function Item({ itemData, isBookmarkedToggle }) {
               <i
                 onClick={() => {
                   isBookmarkedToggle(item.id);
+                  notify();
                 }}
                 className="fa-regular fa-star"
               ></i>

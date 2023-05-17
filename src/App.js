@@ -10,13 +10,9 @@ function App() {
   const [itemData, setItemData] = useState([]);
 
   let isBookmarkedToggle = (id = 999) => {
-    console.log(`isbookmardToggle executed: ${id}`);
     const updatedData = itemData.map((item) => {
       if (item.id === id) {
         item.isBookmarked = !item.isBookmarked;
-        console.log(
-          `id ${id} is changing the isBookmarked into ${item.isBookmarked}`
-        );
         return item;
       }
       return item;
