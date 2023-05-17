@@ -1,0 +1,9 @@
+.itemPageListAll {
+    width: 90vw;
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}

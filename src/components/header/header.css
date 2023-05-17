@@ -1,0 +1,45 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100vw;
+    height: 80px;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.181);
+
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    margin-bottom: 30px;
+}
+
+.left {
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.right {
+    margin-right: 50px;
+}
+
+.logoImage {
+    width: 60px;
+}
+
+.logoTitle {
+    margin-left: 10px;
+    font-family: 'Shrikhand', cursive;
+    font-size: 30px;
+}
+
+.fa-bars {
+    font-size: 30px;
+    transition-duration: 300ms;
+
+    &:hover {
+        cursor: pointer;
+        color: rgb(90, 152, 209);
+    }
+}

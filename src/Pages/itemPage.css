@@ -1,0 +1,10 @@
+.itemPage {
+    height: 100vh;
+}
+
+
+.solid {
+    border-top: 3px solid #FFF7D4;
+    width: 80vw;
+    margin-top: 40px;
+}
