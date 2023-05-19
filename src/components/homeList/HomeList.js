@@ -4,7 +4,7 @@ import "./homeList.css";
 
 function HomeList({ items, isBookmarkedToggle }) {
   let generalItemsFour = items.slice(0, 4);
-  let bookmarkedItems = items.filter((item) => item.isBookmarked);
+  const bookmarkedItems = items.filter((item) => item.isBookmarked);
   let bookmarkedItemsFour = bookmarkedItems.slice(0, 4);
 
   return (
